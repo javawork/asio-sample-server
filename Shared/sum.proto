@@ -1,0 +1,25 @@
+// protoc -I=. --cpp_out=. sum.proto
+
+// [START declaration]
+syntax = "proto3";
+package pbsum;
+// [END declaration]
+
+// [START messages]
+
+enum MessageCode {
+    NONE = 0;
+    ADD = 1;
+    LOCAL_SUM = 2;
+}
+
+message Add {
+    int32 num = 1;
+}
+
+message LocalSum {
+    int32 sum = 1;
+}
+
+
+// [END messages]
